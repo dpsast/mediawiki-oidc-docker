@@ -1,9 +1,9 @@
-FROM mediawiki:1.43.0
+FROM mediawiki:1.43
 
 RUN apt-get update && apt-get install --yes curl libpq-dev tar unzip
 
-ENV PLUGGABLE_AUTH_VERSION=REL1_43-06cac8d
-ENV OPENID_CONNECT_VERSION=REL1_43-f68146b
+ENV PLUGGABLE_AUTH_VERSION=REL1_43-b9a8782
+ENV OPENID_CONNECT_VERSION=REL1_43-953d604
 
 RUN export archive=PluggableAuth-${PLUGGABLE_AUTH_VERSION}.tar.gz && \
     curl --location --silent --output /tmp/${archive} https://extdist.wmflabs.org/dist/extensions/${archive} && \
